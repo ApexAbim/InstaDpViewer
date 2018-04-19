@@ -1,0 +1,128 @@
+img
+{
+    height: 600px;
+    width: 600px;
+}
+
+#uName
+{
+    position: absolute;
+    top: 20px;
+    left: 380px;
+    height: 50px;
+    width: 550px;
+    padding-right: 50px;
+    border-radius: 3px;
+
+}
+
+input,#uName::-webkit-input-placeholder {
+    font-size: 20px;
+    line-height: 2;
+}
+
+#submit
+{
+    position: absolute;
+    top: 20px;
+    left: 380px;
+    margin-left: 483px;
+    height: 55px;
+    width: 120px;
+    background: blue;
+    color: white;
+    border: 0;
+    -webkit-appearance: none;
+    border-radius: 3px;
+}
+
+#dp
+{
+    position: relative;
+    top: 60px;
+    left: 375px;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 350px) 
+{
+    #uName
+    {
+        left: 50px;
+        height: 50px;
+        width: 200px;
+    }
+    input,#uName::-webkit-input-placeholder {
+        font-size: 12px;
+        line-height: 2;
+    }
+    #submit 
+    {
+        left: 50px;
+        margin-left: 194px;
+        width: 60px;
+    }
+    #dp 
+    {
+        position: relative;
+        top: 60px;
+        left: 5px;
+    }
+    img
+    {
+        height: 350px;
+        width: 350px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) 
+{
+    img
+    {
+        height: 600px;
+        width: 600px;
+    }
+
+    #uName
+    {
+        position: absolute; 
+        top: 20px;
+        left: 380px;
+        height: 50px;
+        width: 550px;
+        padding-right: 50px;
+        border-radius: 3px;
+    }
+
+    input,#uName::-webkit-input-placeholder 
+    {
+        font-size: 20px;
+        line-height: 2;
+    }
+
+    #submit
+    {
+        position: absolute;
+        top: 20px;
+        left: 380px;
+        margin-left: 483px;
+        height: 55px;
+        width: 120px;
+        background: blue;
+        color: white;
+        border: 0;
+        -webkit-appearance: none;
+        border-radius: 3px;
+    }
+
+    #dp
+    {
+        position: relative;
+        top: 60px;
+        left: 375px;
+    }
+} 
+
+
+
