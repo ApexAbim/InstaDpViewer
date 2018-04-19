@@ -29,7 +29,7 @@ input,#uName::-webkit-input-placeholder {
     margin-left: 483px;
     height: 55px;
     width: 120px;
-    background: blue;
+    background: red;
     color: white;
     border: 0;
     -webkit-appearance: none;
