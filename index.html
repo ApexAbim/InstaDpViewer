@@ -1,58 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Insta DP Viewer</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-       <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    
 </head>
+
 <body>
 
-    <input type="text" id="uName" placeholder="Enter Username or Profile Link">
-    <input type="submit" id="submit" value="Search"><br/>
+    <input type="text" id="uName" placeholder=" Enter Username or Profile URL">
+    <input type="submit" id="submit" value="Search">
+    <br/>
     <img src="" alt="dp" id="dp" style="display: none;">
 
-    <script>
 
-    var nam = document.querySelector("#uName");
-    var dpImg = document.querySelector('#dp');
+  <div class="loader">  </div>
+  
+  <script type="text/javascript" src="style.js"></script>
 
-    var search = function()
-    {
-        var name=nam.value;
-        var link= "https://www.instagram.com/";
-        if(name.indexOf("https://www.instagram.com/")==-1){
-        name= link+name;
-    }
-        $.ajax(
-            {
-type: 'GET',
-
- url: name,
-
- success: function (data) 
- {
-  data = JSON.parse(data.split("window._sharedData = ")[1].split(';')[0]).entry_data.ProfilePage[0];
-  usr_id = data.graphql.user["id"]; 
-  $.getJSON("https://i.instagram.com/api/v1/users/"+usr_id+"/info/", function(info)
-   {
-    dpImg.style.display="block";
-    dpImg.src=info.user.hd_profile_pic_url_info["url"];
-  });
- }
-}
-);
-    }
-
-    document.getElementById('submit').onclick=search;
-    </script>
+   
 </body>
+
 </html>
-
-
-
-
-
