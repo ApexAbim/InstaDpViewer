@@ -51,11 +51,11 @@ var search = function ()
 document.getElementById('submit').onclick = search;
 
 
-var lij=document.getElementById('submit');
+var btn=document.getElementById('submit');
 
-lij.addEventListener('click',lizzy);
+btn.addEventListener('click',idp);
 
-function lizzy()
+function idp()
 {
     
     lod.style.display="block";  
